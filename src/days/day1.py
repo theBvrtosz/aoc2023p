@@ -38,8 +38,6 @@ class Day1(AocDay):
                     corrupted_value = corrupted_value.replace(spelled_number, spelled_numbers[spelled_number])
             no_spelled_numerics.append(corrupted_value)
 
-        print(no_spelled_numerics)
-
         extracted_numerics = self.__remove_non_numerics_from_calibration_values(no_spelled_numerics)
         two_digit_numerics = self.__extract_two_digit_from_calibration_values(extracted_numerics)
         return sum(two_digit_numerics)
