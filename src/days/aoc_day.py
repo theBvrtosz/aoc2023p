@@ -5,10 +5,13 @@ class AocDay:
 
     def part1(self):
         raise NotImplementedError
-    
+
     def part2(self):
         raise NotImplementedError
 
     def _read_day_input(self, test: bool):
-        with open(f"./inputs/d{self.day_number}/d{self.day_number}-{'test-' if test else ''}input.txt", "r") as f:
+        with open(
+            f"./inputs/d{self.day_number}/d{self.day_number}-{'test-' if test else ''}input.txt",
+            "r",
+        ) as f:
             self.input_lines = f.read().splitlines()

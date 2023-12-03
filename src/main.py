@@ -1,14 +1,8 @@
-from days import (
-    Day1,
-    Day2
-)
+from days import Day1, Day2
 
-DAY_MAP = {
-    "day1": Day1,
-    "day2": Day2
-}
+DAY_MAP = {"day1": Day1, "day2": Day2}
 
-DAY_NUMBER = 2 
+DAY_NUMBER = 2
 
 if __name__ == "__main__":
     day = DAY_MAP[f"day{DAY_NUMBER}"]()
