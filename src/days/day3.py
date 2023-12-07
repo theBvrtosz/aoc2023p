@@ -50,14 +50,14 @@ class Day3(AocDay):
                 row[number_end_idx + 1],
             ]
 
-            chars_surrounding_number = (
+            chars_surrounding_number = set(
                 previous_row_surronding + next_row_surrounding + chars_in_numbers_row
             )
-
-            if set(chars_surrounding_number) != {"."}:
-                print(set(chars_surrounding_number))
-                print(number)
-                row_sum += int(number)
+            with open("gowno.txt", "a") as file:
+                for char in chars_surrounding_number:
+                    if not char.isnumeric() and char != ".":
+                        row_sum += int(number)
+                        break
 
         return row_sum
 
